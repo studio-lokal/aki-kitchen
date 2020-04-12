@@ -1,0 +1,135 @@
+$sluggish-width: 48px;
+$sluggish-container-width: 356px;
+
+.container {
+  width: 1408px;
+  margin: 0 auto;
+  padding: 10px;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    .col.col-left {
+      width: $sluggish-container-width;
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+    .col.col-right {
+      flex: 1;
+    }
+  }
+
+  .header {
+    .col.col-left {
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      right: 100px;
+      width: $sluggish-width;
+      height: $sluggish-width;
+      animation-name: sluggishing;
+      animation-duration: 60s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .logo-text {
+      width: 320px;
+    }
+  }
+
+  .meetups,
+  .partners {
+    border-top: 1px solid;
+    padding-top: 8px;
+  }
+
+  .meetups {
+    .months {
+      display: flex;
+      flex-direction: row;
+
+      &:not(:first-child) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-top: 1px solid;
+      }
+
+      &-month {
+        width: 356px;
+      }
+
+      &-meetups {
+        flex: 1;
+      }
+
+      &-month {
+        h3.month-title {
+          font-size: 28px;
+          font-weight: normal;
+          text-transform: uppercase;
+        }
+      }
+
+      &-meetups {
+        &-meetup {
+          padding-bottom: 32px;
+
+          h3.title {
+            font-size: 28px;
+          }
+
+          div.inner-content {
+            overflow: hidden;
+          }
+
+          p.summary {
+            white-space: pre-wrap;
+          }
+
+          a.btn-attend {
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .partners {
+    h3.partner {
+      display: inline;
+      font-size: 28px;
+      font-weight: light;
+    }
+  }
+}
+
+@keyframes sluggishing {
+  0% {
+    right: $sluggish-container-width - $sluggish-width;
+  }
+
+  50% {
+    right: 0;
+  }
+
+  100% {
+    right: $sluggish-container-width - $sluggish-width;
+  }
+}
