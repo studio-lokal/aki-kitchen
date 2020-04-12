@@ -11,12 +11,8 @@ $sluggish-container-width: 220px;
     flex-direction: row;
 
     .col.col-left {
-      width: $sluggish-container-width;
+      width: 220px;
       margin-right: 10px;
-
-      h2 {
-        font-size: 28px;
-      }
     }
 
     .col.col-right {
@@ -24,89 +20,89 @@ $sluggish-container-width: 220px;
     }
   }
 
-  .header {
-    .col.col-left {
-      position: relative;
-    }
+  // .header {
+  //   .col.col-left {
+  //     position: relative;
+  //   }
 
-    .logo {
-      position: absolute;
-      right: 100px;
-      width: $sluggish-width;
-      height: $sluggish-width;
-    }
+  //   .logo {
+  //     position: absolute;
+  //     right: 100px;
+  //     width: $sluggish-width;
+  //     height: $sluggish-width;
+  //   }
 
-    .logo-text {
-      width: 320px;
-    }
-  }
+  //   .logo-text {
+  //     width: 320px;
+  //   }
+  // }
 
-  .meetups {
-    .months {
-      display: flex;
-      flex-direction: row;
+  // .meetups {
+  //   .months {
+  //     display: flex;
+  //     flex-direction: row;
 
-      &:not(:first-child) {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        border-top: 1px solid;
-      }
+  //     &:not(:first-child) {
+  //       padding-top: 8px;
+  //       padding-bottom: 8px;
+  //       border-top: 1px solid;
+  //     }
 
-      &-month {
-        width: 356px;
-      }
+  //     &-month {
+  //       width: 356px;
+  //     }
 
-      &-meetups {
-        flex: 1;
-      }
+  //     &-meetups {
+  //       flex: 1;
+  //     }
 
-      &-month {
-        h3.month-title {
-          font-size: 28px;
-          font-weight: normal;
-          text-transform: uppercase;
-        }
-      }
+  //     &-month {
+  //       h3.month-title {
+  //         font-size: 28px;
+  //         font-weight: normal;
+  //         text-transform: uppercase;
+  //       }
+  //     }
 
-      &-meetups {
-        &-meetup {
-          padding-bottom: 32px;
+  //     &-meetups {
+  //       &-meetup {
+  //         padding-bottom: 32px;
 
-          h3.title {
-            font-size: 28px;
-          }
+  //         h3.title {
+  //           font-size: 28px;
+  //         }
 
-          div.inner-content {
-            overflow: hidden;
-          }
+  //         div.inner-content {
+  //           overflow: hidden;
+  //         }
 
-          p.summary {
-            white-space: pre-wrap;
-          }
+  //         p.summary {
+  //           white-space: pre-wrap;
+  //         }
 
-          a.btn-attend {
-            display: block;
-            width: 100%;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-align: center;
-            background-color: black;
-            color: white;
-            padding-top: 14px;
-            padding-bottom: 14px;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
+  //         a.btn-attend {
+  //           display: block;
+  //           width: 100%;
+  //           font-size: 18px;
+  //           font-weight: bold;
+  //           letter-spacing: 1px;
+  //           text-align: center;
+  //           background-color: black;
+  //           color: white;
+  //           padding-top: 14px;
+  //           padding-bottom: 14px;
+  //           text-decoration: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  .partners {
-    h3.partner {
-      display: inline;
-      font-size: 28px;
-      font-weight: light;
-    }
-  }
+  // .partners {
+  //   h3.partner {
+  //     display: inline;
+  //     font-size: 28px;
+  //     font-weight: light;
+  //   }
+  // }
 }
