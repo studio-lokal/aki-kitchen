@@ -1,10 +1,10 @@
 $sluggish-width: 48px;
-$sluggish-container-width: 356px;
+$sluggish-container-width: 220px;
 
 .container {
-  width: 1408px;
+  width: 960px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 20px;
 
   .row {
     display: flex;
@@ -12,6 +12,7 @@ $sluggish-container-width: 356px;
 
     .col.col-left {
       width: $sluggish-container-width;
+      margin-right: 10px;
 
       h2 {
         font-size: 28px;
@@ -33,21 +34,11 @@ $sluggish-container-width: 356px;
       right: 100px;
       width: $sluggish-width;
       height: $sluggish-width;
-      animation-name: sluggishing;
-      animation-duration: 60s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
 
     .logo-text {
       width: 320px;
     }
-  }
-
-  .meetups,
-  .partners {
-    border-top: 1px solid;
-    padding-top: 8px;
   }
 
   .meetups {
@@ -117,19 +108,5 @@ $sluggish-container-width: 356px;
       font-size: 28px;
       font-weight: light;
     }
-  }
-}
-
-@keyframes sluggishing {
-  0% {
-    right: $sluggish-container-width - $sluggish-width;
-  }
-
-  50% {
-    right: 0;
-  }
-
-  100% {
-    right: $sluggish-container-width - $sluggish-width;
   }
 }

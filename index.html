@@ -7,19 +7,22 @@ layout: default
 
 <div class="row header">
   <div class="col col-left">
-    <img class="logo" alt="slug image" src="/assets/images/slug.svg" />
+    <!-- <img class="logo" alt="slug image" src="/assets/images/slug.svg" /> -->
   </div>
   <div class="col col-right">
-    <img class="logo-text" alt="sluggish hackers" src="/assets/images/logo.svg" />
+    <!-- <img class="logo-text" alt="sluggish hackers" src="/assets/images/logo.svg" /> -->
     <p class="description">
-      Sluggish Hackers는 게으른 해커들의 네트워크입니다.<br />
-      더 나은 기술이란 미래지향적이고 지금보다 더 빠르게, 남들보다 더 빨리 만들어내야 하는 것이라 믿는 시대에<br />
-      기술이 만들 미래의 모습보다 기술이 남겨놓은 어제와 오늘의 문제들에 더 관심을 가지려고 합니다.<br />
-      다양한 방법으로 해커들을 만나고 협력하기 위한 첫번째 프로젝트, 월간밋업을 소개합니다.<br />
+      <!-- Sluggish Hackers는 게으른 해커들의 네트워크입니다.<br />
+      더 나은 기술이란 미래지향적이고 지금보다 더 빠르게, 남들보다 더 빨리
+      만들어내야 하는 것이라 믿는 시대에<br />
+      기술이 만들 미래의 모습보다 기술이 남겨놓은 어제와 오늘의 문제들에 더
+      관심을 가지려고 합니다.<br />
+      다양한 방법으로 해커들을 만나고 협력하기 위한 첫번째 프로젝트, 월간밋업을
+      소개합니다.<br /> -->
     </p>
   </div>
 </div>
-
+<!-- 
 <div class="row meetups">
   <div class="col col-left">
     <h2>Meetups</h2>
@@ -31,22 +34,22 @@ layout: default
         <h3 class="month-title">{{ month.month }}.</h3>
       </div>
       <div class="months-meetups">
-        {% if month.meetups %}
-        {% for m in month.meetups %}
+        {% if month.meetups %} {% for m in month.meetups %}
         <div class="months-meetups-meetup">
           <h3 class="title">{{ m.title }}</h3>
           <div class="inner-content">
             <ul>
               <li>Date: {{ m.date }}</li>
               <li>Place: Seoul Nooks</li>
-              <li>Speaker: <a href="{{ m.speaker.link }}">{{ m.speaker.name }}</a></li>
+              <li>
+                Speaker: <a href="{{ m.speaker.link }}">{{ m.speaker.name }}</a>
+              </li>
             </ul>
             <p class="summary">{{ m.summary }}</p>
             <a class="btn-attend" href="{{ m.link }}">참석 신청하기</a>
           </div>
         </div>
-        {% endfor %}
-        {% else %}
+        {% endfor %} {% else %}
         <div class="months-meetups-meetup">
           <h3 class="title">Upcoming</h3>
         </div>
@@ -63,7 +66,7 @@ layout: default
   </div>
   <div class="col col-right">
     {% for partner in site.data.partners %}
-    <h3 class="partner">{{ partner.title }} | </h3>
+    <h3 class="partner">{{ partner.title }} |</h3>
     {% endfor %}
   </div>
-</div>
+</div> -->
