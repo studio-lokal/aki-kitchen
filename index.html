@@ -8,28 +8,43 @@ layout: default
 <div class="intro">
   <div class="row">
     <div class="col col-left">
-      <img class="logo" alt="아키식당 로고" src="/assets/images/slug.svg" />
+      <img class="logo" alt="아키식당 로고" src="/assets/images/logo.png" />
+    </div>
+    <div class="col col-right">
+      <div class="intro--desc">
+        아키식당은 당신의 시간 속에서 열리는 낯설고 유쾌한 작은 식당입니다.
+        <br />
+        아키가 직접 만드는 따뜻한 음식과 함께 당신과 그리고 낯선 이들과 소소한 일상을 나눕니다.
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row header">
-  <div class="col col-left">
-    <!-- <img class="logo" alt="slug image" src="/assets/images/slug.svg" /> -->
+<div class="meetups">
+  {% for item in site.data.kitchens %}
+  <div class="row">
+    <div class="col col-left">
+      <div class="meetups--date">
+        <div class="meetups--date__month">{{ item.month }}.</div>{{ item.date }}
+      </div>
+    </div>
+    <div class="col col-right">
+      <div class="meetups--content">
+        <div class="meetups--content__title">{{ item.title }}</div>
+        <div class="meetups--content__info">
+          PLACE: {{ item.place }}<br />
+          MENU: {{ item.menu }}<br />
+          CHEF: {{ item.chef }}
+        </div>
+        <div class="meetups--content__desc">{{item.summary}}</div>
+
+      </div>
+    </div>
   </div>
-  <div class="col col-right">
-    <!-- <img class="logo-text" alt="sluggish hackers" src="/assets/images/logo.svg" /> -->
-    <p class="description">
-      <!-- Sluggish Hackers는 게으른 해커들의 네트워크입니다.<br />
-      더 나은 기술이란 미래지향적이고 지금보다 더 빠르게, 남들보다 더 빨리
-      만들어내야 하는 것이라 믿는 시대에<br />
-      기술이 만들 미래의 모습보다 기술이 남겨놓은 어제와 오늘의 문제들에 더
-      관심을 가지려고 합니다.<br />
-      다양한 방법으로 해커들을 만나고 협력하기 위한 첫번째 프로젝트, 월간밋업을
-      소개합니다.<br /> -->
-    </p>
-  </div>
+  {% endfor %}
 </div>
+
+
 <!-- 
 <div class="row meetups">
   <div class="col col-left">
@@ -40,41 +55,41 @@ layout: default
     <div class="months">
       <div class="months-month">
         <h3 class="month-title">{{ month.month }}.</h3>
-      </div>
-      <div class="months-meetups">
-        {% if month.meetups %} {% for m in month.meetups %}
-        <div class="months-meetups-meetup">
-          <h3 class="title">{{ m.title }}</h3>
-          <div class="inner-content">
-            <ul>
-              <li>Date: {{ m.date }}</li>
-              <li>Place: Seoul Nooks</li>
-              <li>
-                Speaker: <a href="{{ m.speaker.link }}">{{ m.speaker.name }}</a>
-              </li>
-            </ul>
-            <p class="summary">{{ m.summary }}</p>
-            <a class="btn-attend" href="{{ m.link }}">참석 신청하기</a>
+        </div>
+        <div class="months-meetups">
+          {% if month.meetups %} {% for m in month.meetups %}
+          <div class="months-meetups-meetup">
+            <h3 class="title">{{ m.title }}</h3>
+            <div class="inner-content">
+              <ul>
+                <li>Date: {{ m.date }}</li>
+                <li>Place: Seoul Nooks</li>
+                <li>
+                  Speaker: <a href="{{ m.speaker.link }}">{{ m.speaker.name }}</a>
+                </li>
+              </ul>
+              <p class="summary">{{ m.summary }}</p>
+              <a class="btn-attend" href="{{ m.link }}">참석 신청하기</a>
+            </div>
           </div>
+          {% endfor %} {% else %}
+          <div class="months-meetups-meetup">
+            <h3 class="title">Upcoming</h3>
+          </div>
+          {% endif %}
         </div>
-        {% endfor %} {% else %}
-        <div class="months-meetups-meetup">
-          <h3 class="title">Upcoming</h3>
-        </div>
-        {% endif %}
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
 
-<div class="row partners">
-  <div class="col col-left">
-    <h2>함께하는 사람들</h2>
-  </div>
-  <div class="col col-right">
-    {% for partner in site.data.partners %}
-    <h3 class="partner">{{ partner.title }} |</h3>
-    {% endfor %}
-  </div>
-</div> -->
+  <div class="row partners">
+    <div class="col col-left">
+      <h2>함께하는 사람들</h2>
+    </div>
+    <div class="col col-right">
+      {% for partner in site.data.partners %}
+      <h3 class="partner">{{ partner.title }} |</h3>
+      {% endfor %}
+    </div>
+  </div> -->

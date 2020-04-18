@@ -10,13 +10,81 @@ $sluggish-container-width: 220px;
     display: flex;
     flex-direction: row;
 
-    .col.col-left {
-      width: 220px;
-      margin-right: 10px;
+    .col {
+      font-size: 0;
+
+      &.col-left {
+        width: 220px;
+        margin-right: 10px;
+      }
+
+      &.col-right {
+        flex: 1;
+      }
+    }
+  }
+
+  .intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .logo {
+      height: 40px;
     }
 
-    .col.col-right {
-      flex: 1;
+    .intro--desc {
+      font-size: 14px;
+    }
+
+  }
+
+  .meetups {
+    .row {
+      &:last-child {
+        .col {
+          border-bottom: 1px solid #000;
+  
+          &.col-left {
+            border-bottom: 2px solid #000;
+          }
+        }
+      }
+
+      .col {
+        border-top: 1px solid #000;
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+        &.col-left {
+          border-top: 2px solid #000;
+        }
+      }
+    }
+
+    &--date {
+      font-size: 14px;
+
+      &__month {
+        font-size: 32px;
+        line-height: 0.94;
+        margin-bottom: 5px;
+      }
+    }
+
+    &--content {
+      &__title {
+        font-size: 32px;
+        line-height: 0.94;
+        margin-bottom: 10px;
+      }
+      &__info {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      &__desc {
+        font-size: 14px;
+      }
+
     }
   }
 
