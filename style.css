@@ -159,10 +159,10 @@ a:visited {
 }
 .section-image .jeff {
   background-image: url(./images/jeff.png);
-  width: 94px;
-  height: 74px;
+  width: 110px;
+  height: 88px;
   position: absolute;
-  bottom: -23px;
+  bottom: -26px;
   left: 20px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -194,8 +194,8 @@ a:visited {
 
   .section-image .jeff {
     bottom: auto;
-    top: -49px;
-    left: 30px;
+    top: -60px;
+    left: 115px;
   }
 }
 
